@@ -63,7 +63,7 @@ stk_miscellaneousupdateServer <- function(input,output,session,dms_token,erp_tok
     FDEPTID =text_stk_miscellaneous_FDEPTID()
     FDate = date_stk_miscellaneous_FDate()
 
-    data = mdlTMBillSyncPkg::stk_miscellaneous_Fisdo_update(dms_token = dms_token,FBillTypeID = FBillTypeID,FINDEPTID =FINDEPTID ,FDate = FDate)
+    data = mdlTMBillSyncPkg::stk_miscellaneous_Fisdo_update(dms_token = dms_token,FBillTypeID = FBillTypeID,FDEPTID = FDEPTID,FDate = FDate)
     tsui::pop_notice('更新成功')
 
   })

@@ -92,8 +92,8 @@ prd_pickMtrl2SyncServer <- function(input,output,session,dms_token,erp_token,aps
     FDate = date_prd_pickMtrl2_FDate()
 
     result <- callr::r(function(token_api_erpKdc, FTokenDms, FSrcBillNo, FDate) {
-      mdl <- tsda::import('pyapikdc.prd.ext.tm.pickMtrl')
-      app <- mdl$PickMtrlBill_TM(token = token_api_erpKdc)
+      mdl <- tsda::import('pyapikdc.prd.ext.tm.pickMtrl2')
+      app <- mdl$PickMtrlBill2_TM(token = token_api_erpKdc)
       app$SyncOneManually(
         FTokenDms = FTokenDms,
         FSrcBillNo = FSrcBillNo,
